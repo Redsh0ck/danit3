@@ -1,0 +1,15 @@
+[Unit]
+Description=Watch Directory Service
+After=network.target
+
+[Service]
+ExecStart=/home/greenwoo/danit3/homework2/eyes.sh
+WorkingDirectory=/home/greenwoo/danit3/homework2
+StandardOutput=journal
+StandardError=journal
+Restart=always
+User=greenwoo
+Group=greenwoo
+
+[Install]
+WantedBy=multi-user.target
